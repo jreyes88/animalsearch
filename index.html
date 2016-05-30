@@ -1,39 +1,35 @@
-<!-- Purpose of this code is to dynamically generate buttons using only jQuery (i.e. no hardcoded html buttons) -->
 <html>
 <head>
-    <title>Favorite Movies</title>
+    <title>Animal Search</title>
+
+    <!-- The CSS needs to migrate to a separate CSS folder -->
     <style type="text/css">
         button, div, form, input {
             margin: 10px;
         }
     </style>
 </head>
-<body>
+    <body>
 
-<div class="container">
-  <h1>Animal Search</h1>
+        <div class="container">
+            <h1>Animal Search</h1>
 
-  <!-- Movies will get dumped here -->
-  <div id="animalsView">
+            <!-- The animal buttons appear here -->
+            <div id="animalsView"></div>
 
-  </div>
+            <form id="animal-form">
+                <label for="animal-input">Add an Animal</label>
+                <input type="text" id="animal-input"><br>
 
-  <form id="animal-form">
-    <label for="animal-input">Add an Animal</label>
-    <input type="text" id="animal-input"><br>
-    
-    <!-- Button triggers new animal to be added -->
-    <input id="addAnimal" type="submit" value="Add an Animal">
-  </form>
+                <!-- Button triggers new animal to be added -->
+                <input id="addAnimal" type="submit" value="Add an Animal">
+            </form>
 
-  <div id="gifsAppearHere">
-  </div>
+            <div id="gifsAppearHere"></div>
+        </div>
 
-<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
-<script type="text/javascript" src="assets/js/js.js">
+        <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+        <script type="text/javascript" src="assets/js/js.js"></script>
 
-</script>
-
-
-</body>
+    </body>
 </html>
