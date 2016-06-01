@@ -11,12 +11,15 @@ h1 {
 
 p {
 	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 #animalsView {
 	height: 40px;
 	padding: 0;
 	margin: 25px 50px;
+	overflow: auto;
 }
 
 .animal {

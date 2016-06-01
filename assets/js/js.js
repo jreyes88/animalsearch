@@ -1,5 +1,5 @@
 // Initial array of animals
-var animals = ['Cat', 'Dog', 'Lemur', 'Buffalo'];
+var animals = ['Cat', 'Dog', 'Lemur', 'Red Panda', 'Corgi', 'Otter', 'Slow Loris'];
 
 // Generic function for displaying animal buttons 
 function renderButtons(){ 
@@ -72,7 +72,7 @@ $('body').on('click', '.animal', function() {
 });
 
 // This function handles the click event that activates and deactivates gif animation
-$('body').on('click', '.clickAnimal', function(){
+$('#gifsAppearHere').on('click', '.clickAnimal', function(){
 
     // the image attribute of state is stored into a variable state, which is then used to compare in the if/else statement below
     var state = $("img").attr("data-state");
@@ -80,7 +80,7 @@ $('body').on('click', '.clickAnimal', function(){
     if (state === 'still') {
         $(this).attr('src', $(this).data('animate'));
         $(this).attr('data-state', 'animate');
-    } else {
+    } else if (state === 'animate') {
         $(this).attr('src', $(this).data('still'));
         $(this).attr('data-state', 'still');
     }
