@@ -19,7 +19,6 @@ p {
 	height: 40px;
 	padding: 0;
 	margin: 25px 50px;
-	overflow: auto;
 }
 
 .animal {
@@ -75,7 +74,8 @@ input[type=text] {
 	border-radius: 5px;
 	font-size: 18px;
 	color: #333;
-	font-weight: lighter;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
 }
 
 #addAnimal {
@@ -89,7 +89,7 @@ input[type=text] {
 	color: #000;
 	cursor: pointer;
 	display: inline-block;
-	font-weight: 400;
+	font-weight: 300;
 	letter-spacing: .5px;
 }
 
@@ -104,7 +104,7 @@ input[type=text] {
 	color: #000;
 	cursor: pointer;
 	display: inline-block;
-	font-weight: 400;
+	font-weight: 300;
 	letter-spacing: .5px;
 }
 
