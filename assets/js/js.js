@@ -27,7 +27,6 @@ $('#addAnimal').on('click', function(){
 // This function handles events when an animal button is clicked
 $('body').on('click', '.animal', function() {
 
-
     // stores the animal clicked in variable p, which is then passed into the queryURL
     var p = $(this).data('animal');
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=dc6zaTOxFJmzC&limit=10";
