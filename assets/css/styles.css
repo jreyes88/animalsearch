@@ -1,0 +1,13 @@
+.animal {
+	height: 30px;
+	width: 60px;
+	background-color: red;
+	display: inline;
+	margin-left: 10px;
+}
+
+.animal:hover {
+	border-style: solid;
+	border-color: black;
+	border-width: 20px;
+}

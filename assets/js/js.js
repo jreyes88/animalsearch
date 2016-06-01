@@ -5,7 +5,7 @@ var animals = ['Cat', 'Dog', 'Lemur', 'Buffalo'];
 function renderButtons(){ 
     $("#animalsView").empty(); //empties animals view
     for (var i = 0; i < animals.length; i++) {
-        var a = $('<button>'); // creates blank button
+        var a = $('<div>'); // creates blank button
         a.addClass('animal'); // add a class
         a.attr('data-animal', animals[i]); // added a data attribute
         a.text(animals[i]); // provide button text
@@ -31,6 +31,7 @@ $('body').on('click', '.animal', function() {
     // stores the animal clicked in variable p, which is then passed into the queryURL
     var p = $(this).data('animal');
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=dc6zaTOxFJmzC&limit=10";
+    console.log(queryURL);
 
     // ajax method
     $.ajax({
