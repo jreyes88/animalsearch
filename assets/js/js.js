@@ -1,5 +1,5 @@
 // Initial array of animals
-var animals = ['Serval', 'Tibetan Sand Fox', 'Snake Wearing A Hat', 'Red Panda', 'Corgi', 'Otter', 'Slow Loris'];
+var animals = ['Pallas Cat', 'Tibetan Sand Fox', 'Snake Wearing A Hat', 'Red Panda', 'Corgi', 'Otter', 'Slow Loris'];
 
 // Generic function for displaying animal buttons 
 function renderButtons(){ 
