@@ -30,7 +30,6 @@ $('body').on('click', '.animal', function() {
     // stores the animal clicked in variable p, which is then passed into the queryURL
     var p = $(this).data('animal');
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=dc6zaTOxFJmzC&limit=10";
-    console.log(queryURL);
 
     // ajax method
     $.ajax({
@@ -78,14 +77,10 @@ $('#gifsAppearHere').on('click', '.clickAnimal', function(e){
 
     // the image attribute of state is stored into a variable state, which is then used to compare in the if/else statement below
     var state = $(this).attr("data-state");
-    // console.log(state)
 
     if (state === 'still') {
         $(this).attr('src', $(this).attr('data-animate'));
-        // console.log($(this).attr('data-animate'));
         $(this).attr('data-state', 'animate');
-        // console.log($(this).attr('data-state'));
-        console.log($(this));
     } else {
         $(this).attr('src', $(this).attr('data-still'));
         $(this).attr('data-state', 'still');
