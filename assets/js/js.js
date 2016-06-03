@@ -1,5 +1,5 @@
 // Initial array of animals
-var animals = ['Cat', 'Dog', 'Lemur', 'Red Panda', 'Corgi', 'Otter', 'Slow Loris'];
+var animals = ['Serval', 'Tibetan Sand Fox', 'Snake Wearing A Hat', 'Red Panda', 'Corgi', 'Otter', 'Slow Loris'];
 
 // Generic function for displaying animal buttons 
 function renderButtons(){ 
@@ -9,7 +9,7 @@ function renderButtons(){
         a.addClass('animal'); // add a class
         a.attr('data-animal', animals[i]); // added a data attribute
         a.text(animals[i]); // provide button text
-        $("#animalsView").append(a); // appends the button to animal view
+        $("#animalsView").prepend(a); // prepends the button to animal view
     };
 };
 
