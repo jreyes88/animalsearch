@@ -1,31 +1,91 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Animal Search</title>
-    <!-- The CSS needs to migrate to a separate CSS folder -->
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <title>Cute Emergency!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400italic' rel='stylesheet' type='text/css'>
 </head>
     <body>
         <div class="container">
-            <h1>Animal Search</h1>
+            <div class="jumbotron">
+                <img src="assets/images/cute_emergency_logo.png" alt="Cute Emergency Panda Logo" id="pandaLogo">
+
+                <div id="siteLinks">
+                    <!-- Instructions Modal Link -->
+                    <a href="#" data-toggle="modal" data-target="#instructionalModal" id="instructionalButton">How does it work?</a>
+
+                    <p id="linkSeparator">||</p>
+
+                    <!-- Search Modal Link -->
+                    <a href="#" data-toggle="modal" data-target="#searchModal" id="searchButton">New animal search</a>
+                </div>
+
+            </div>
 
             <!-- The animal buttons appear here -->
-            <div id="animalsView"></div>
-
-            <form id="animal-form">
-                <label for="animal-input">Add an Animal</label>
-                <input type="text" id="animal-input"><br>
-
-                <!-- Button triggers new animal to be added -->
-                <div id="addAnimal">
-                    <p>Add :-D</p>
-                </div>
-            </form>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8" id="animalsView"></div>
+                <div class="col-md-2"></div>
+            </div>
 
             <div id="gifsAppearHere"></div>
         </div>
 
-        <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+        <!-- Instructional Modal -->
+        <div class="modal fade" id="instructionalModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:15px 25px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="glyphicon glyphicon-heart-empty"></span> How does this site work? <span class="glyphicon glyphicon-heart-empty"></h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <ol>
+                            <li>Click on an animal button</li>
+                            <li>Click a picture to animate it</li>
+                            <li>Click the picture again to stop animation</li>
+                            <li>Search for a new animal</li>
+                            <li>Feel better about your day!</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  Search Modal -->
+        <div class="modal fade" id="searchModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:15px 25px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="glyphicon glyphicon-eye-open"></span> Search for new animal gifs! <span class="glyphicon glyphicon-eye-open"></span></h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <form id="animal-form">
+                            <label for="animal-input">Add an Animal</label>
+                            <input type="text" id="animal-input"><br>
+
+                            <!-- Button triggers new animal to be added -->
+                            <button id="addAnimal">
+                                <p>Add :-D</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
         <script type="text/javascript" src="assets/js/js.js"></script>
     </body>
 </html>

@@ -1,16 +1,16 @@
 body {
-   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 300;
-}
-
-h1 {
-	font-size: 40px;
-	padding-left: 10px;
-	margin: 25px 50px;
+	font-family: 'Lobster Two', cursive, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(90deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(90deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(90deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(90deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); /* Standard syntax */
 }
 
 p {
 	text-align: center;
+	letter-spacing: .5px;
+	font-size: 18px;
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
@@ -18,8 +18,14 @@ p {
 #animalsView {
 	height: 90px;
 	padding: 0;
-	margin: 25px 50px;
-	overflow: scroll;
+	margin: auto;
+}
+
+.jumbotron {
+	background-color: #fff;
+	height: 200px;
+	padding: 0;
+	margin: 0;
 }
 
 .animal {
@@ -36,13 +42,12 @@ p {
 	display: inline-block;
 	font-weight: 400;
 	letter-spacing: .5px;
-	text-transform: uppercase;
 }
 
 .animal:hover {
-	background-color: #5CC3E6;
+	background-color: #ef8967;
 	padding: 10px 20px;
-	margin: 0 0 0 10px;
+	margin: 5px 0 0 10px;
 	border-style: solid;
 	border-color: black;
 	border-width: .75px;
@@ -52,7 +57,6 @@ p {
 	display: inline-block;
 	font-weight: 400;
 	letter-spacing: .5px;
-	text-transform: uppercase;
 }
 
 #animal-form{
@@ -95,7 +99,7 @@ input[type=text] {
 }
 
 #addAnimal:hover {
-	background-color: #5CC3E6;
+	background-color: #ef8967;
 	padding: 10px 20px;
 	margin: 15px 0 0 0;
 	border-style: solid;
@@ -110,10 +114,189 @@ input[type=text] {
 }
 
 #gifsAppearHere {
-	margin: 10px 50px 25px 50px;
+	margin: 0px 50px 25px 50px;
 }
 
 .item {
-	float: left;
-	margin-left: 8px;
+	display: inline-block;
+	float: none;
+	clear: both;
+	margin: 8px 8px;
+	padding: auto;
+}
+
+/*
+  =======================================
+  Logo
+  =======================================
+*/
+#pandaLogo {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 20%;
+}
+
+/*
+  =======================================
+  List
+  =======================================
+*/
+ol {
+    list-style: decimal inside;
+    letter-spacing: .5px;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+	display: list-item;
+	text-align: center;
+	letter-spacing: .5px;
+	margin-top: 10px
+}
+
+/*
+  =======================================
+  Modal
+  =======================================
+*/
+.modal-header, h4, .close {
+    background-color: #ef8967;
+    color:white !important;
+    text-align: center;
+    font-size: 20px;
+}
+.modal-footer {
+    background-color: #f9f9f9;
+}
+
+#instructionalButton {
+	color: #000;
+	cursor: pointer;
+	font-weight: 400;
+	letter-spacing: .5px;
+	margin-left: 10%;
+	display: inline;
+}
+
+#instructionalButton:hover {
+	color: #000;
+	cursor: pointer;
+	font-weight: 400;
+	letter-spacing: .5px;
+	display: inline;
+}
+
+#searchButton {
+	color: #000;
+	cursor: pointer;
+	font-weight: 400;
+	letter-spacing: .5px;
+	margin-right: 10%;
+	display: inline;
+}
+
+#searchButton:hover {
+	color: #000;
+	cursor: pointer;
+	font-weight: 400;
+	letter-spacing: .5px;
+	display: inline;
+}
+
+#linkSeparator {
+	color: #BFBFBF;
+	display: inline;
+	padding: 0 20px;
+}
+
+#siteLinks {
+	width: 33%;
+	margin: 0 33%;
+}
+
+/*
+  =======================================
+  Responsive Web Design
+  =======================================
+*/
+@media screen and (max-width: 1200px) {
+	#instructionalButton {
+		display: block;
+		text-align: center;
+		margin: 10px 0 0 0;
+		padding: auto;
+	}
+
+	#instructionalButton:hover {
+		display: block;
+		text-align: center;
+		margin: 10px 0 0 0;
+		padding: auto;
+	}
+
+	#linkSeparator {
+		display: none;
+	}
+
+	#searchButton {
+		display: block;
+		text-align: center;
+		margin: 10px 0 0 0;
+		padding: auto;
+	}
+	#searchButton:hover {
+		display: block;
+		text-align: center;
+		margin: 10px 0 0 0;
+		padding: auto;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	#pandaLogo {
+	    display: block;
+	    margin: 0 auto;
+	    padding: 0;
+	    width: 30%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.jumbotron {
+		height: 230px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.jumbotron {
+		height: 180px;
+	}
+
+	#instructionalButton {
+		margin: 0;
+	}
+
+	#instructionalButton:hover {
+		margin: 0;
+	}
+
+	#searchButton {
+		margin: 5px 0 0 0;
+	}
+
+	#searchButton:hover {
+		margin: 5px 0 0 0;
+	}
+
+	img.clickAnimal {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.jumbotron {
+		height: 130px;
+	}
 }

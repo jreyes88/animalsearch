@@ -1,11 +1,11 @@
 // Initial array of animals
-var animals = ['Pallas Cat', 'Tibetan Sand Fox', 'Snake Wearing A Hat', 'Red Panda', 'Corgi', 'Otter', 'Slow Loris'];
+var animals = ['Pallas Cat', 'Tibetan Sand Fox', 'Great Dane', 'Corgi', 'Otter', 'Slow Loris', 'Red Panda'];
 
 // Generic function for displaying animal buttons 
 function renderButtons(){ 
     $("#animalsView").empty(); //empties animals view
     for (var i = 0; i < animals.length; i++) {
-        var a = $('<div>'); // creates blank button
+        var a = $('<button>'); // creates blank button
         a.addClass('animal'); // add a class
         a.attr('data-animal', animals[i]); // added a data attribute
         a.text(animals[i]); // provide button text
@@ -41,14 +41,9 @@ $('body').on('click', '.animal', function() {
         // passes JSON object into variable results
         var results = response.data;
 
-        // for loop to construct the animal objects as they appear on screen. This includes the picture rating and image
+        // for loop to construct the animal objects as they appear on screen. This includes the picture source and image
         for (var i = 0; i < results.length; i++) {
             var gifDiv = $('<div class="item">')
-
-            // Rating
-            var rating = results[i].rating;
-            var p = $('<p>').text("Rating: " + rating);
-
             // Image
             var animalImage = $('<img>');
             animalImage.attr('src', results[i].images.fixed_height_still.url);
@@ -57,8 +52,7 @@ $('body').on('click', '.animal', function() {
             animalImage.attr('data-state', "still");
             animalImage.attr('class', "clickAnimal");
 
-            // Appends the rating and image to the gifDiv
-            gifDiv.append(p)
+            // Appends the source and image to the gifDiv
             gifDiv.append(animalImage)
 
             // Prepends the gifDiv to the div with ID gifsAppearHere
@@ -85,4 +79,11 @@ $('#gifsAppearHere').on('click', '.clickAnimal', function(e){
         $(this).attr('src', $(this).attr('data-still'));
         $(this).attr('data-state', 'still');
     }
+});
+
+// Modal
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#instructionalModal").modal();
+    });
 });
